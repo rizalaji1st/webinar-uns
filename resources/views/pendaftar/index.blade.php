@@ -27,7 +27,7 @@
         </div>
 
         <div class="d-flex justify-content-end">
-            <button class="btn btn-lg btn-success">Lihat lebih banyak</button>
+            <a href="{{ route('webinar.index') }}"><button class="btn btn-lg btn-success">Lihat lebih banyak</button></a>
         </div>
 
         @if(isset($myWebinar))

@@ -26,7 +26,13 @@
                         <h5 class="font-weight-bold">Pendaftaran</h5>
                         <p>{{ $webinar->tanggal_pendaftaran }}</p>
                         <div class="mt-4">
-                            <button class="btn btn-block rounded btn-success font-weight-bold">Daftar Sekarang</button>
+                            @guest
+                                <button class="btn btn-block rounded btn-warning font-weight-bold">Daftar Sekarang</button>
+                            @else
+                                @can('are-pendaftar')
+                                <button class="btn btn-block rounded btn-success font-weight-bold">Daftar Sekarang</button>
+                                @endcan
+                            @endguest
                         </div>
                     </div>
                 </div>
